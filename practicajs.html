@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //         1.BOOLEANO
+        booleano1 = true;
+        booleano2 = false;
+
+        // Crear variable booleanoAnd cuyo valor sea la comparación booleana booleano1 and booleano2
+        let booleanoAnd = booleano1 && booleano2;
+        console.log("booleanoAnd", booleanoAnd);
+        // Crear variable booleanoOr cuyo valor sea la comparación booleana booleano1 or booleano2
+        let booleanoOr = booleano1 || booleano2;
+        console.log("booleanoOr", booleanoOr)
+            // Crear variable booleanoNot cuyo valor sea la comparación booleana no booleano1
+        let booleanoNot = !booleano1;
+        console.log("booleanoNot", booleanoNot);
+        // Crear variable booleanoMix0 cuyo valor sea la comparación booleana (booleano1 or booleano2) and (booleano1 or (not booleano1 and not booleano2)
+        let booleanoMix0 = (booleano1 || booleano2) && (booleano1 || (!booleano1 && !booleano2));
+        console.log("booleanoMix0", booleanoMix0);
+        //         2.Operadores
+        // Crear variable valorDivisión cuyo valor sea la división de 17 entre 3 y que solo muestre 2 decimales en el resultado
+        let valorDivision = 17 / 3;
+        console.log("valor division", valorDivision)
+        console.log("valor división con solo dos decimales", valorDivision.toFixed(2))
+            // Crear variable valorResto cuyo valor sea el resto de 17 entre 7
+        let valorResto = 17 % 7;
+        console.log("valorResto", valorResto);
+        //         3.Lógica de programación
+        // Crea una variable A cuyo valor sea el número 9, después crea una variable B cuyo valor sea un string con el número 9, desarrolla la lógica para que cuando A == B muestre por consola “Son iguales”, ¿qué pasa si en vez de tener A == B, comprobamos que A === B?
+        let A = 9;
+        let B = A.toString();
+        console.log(B);
+        console.log(typeof B);
+        if (A == B) {
+            console.log("Son iguales")
+        };
+        if (A === B) {
+            console.log("Son iguales en dato y tipo")
+        } else {
+            console.log("no son exactamente iguales")
+        };
+
+        // Crea una variable mochila que sea un array de elementos, desarrolla la lógica para que sí mochila tiene más de 10 elementos muestre por consola el mensaje “No puedo cargar con tantas cosas”, sí mochila contiene entre 10 y 2 elementos se muestre por consola “Que bien voy con mi mochila” y si no muestre por consola “Creo q no necesito una mochila”
+        let mochila = ["pc", "lapiz", "carpeta", "cargador", "pc", "lapiz", "carpeta", "cargador", "hola", "pc"];
+        console.log("elementos mochila", mochila.length);
+        console.log("mochila", mochila);
+        if (mochila.length > 10) {
+            console.log("No puedo cargar con tantas cosas")
+        } else if (mochila.length >= 2 && mochila.length <= 10) {
+            console.log("Que bien voy con mi mochila")
+        } else {
+            console.log("Creo que no necesito una mochila")
+        }
+
+        // Crear variable contarHasta10 con valor 0 e incrementar su valor con un bucle hasta que se verifique que contarHasta10 === 10
+        let contarHasta10 = 0;
+
+
+        for (contarHasta10; contarHasta10 <= 10; contarHasta10++) {
+            console.log(contarHasta10)
+        }
+
+        // Crea una variable diaFestivo que sea de tipo boolean. Crea un ternario que si diaFestivo es true devuelve un console.log de ‘Hoy no trabajo’ y  si es false ‘Hoy trabajo’
+        let diaFestivo = true;
+        diaFestivo ? console.log("hoy no trabajo") : console.log("Hoy trabajo");
+        // Crea una variable arrayBucle tipo array vacía, rellénala con números del 4 al 18 utilizando un bucle
+        let arrayBucle = [];
+        for (let i = 4; i <= 18; i++) {
+
+            arrayBucle.push(i);
+            console.log("arrayBucle", arrayBucle[i])
+        }
+
+        console.log(arrayBucle)
+            // Recorre la variable creada anteriormente arrayBucle ,suma todos sus elementos y guárdalos en una variable de nombre resultado
+        for (let bucle of arrayBucle) {
+            console.log("bucle", bucle)
+        }
+
+        let Result = 0;
+
+        for (let i = 0; i < arrayBucle.length; i++) {
+            Result += arrayBucle[i];
+        }
+        console.log("Result que es la suma de todo", Result);
+
+
+        // // Dado el siguiente array, [‘Con’, ‘Sofia’, ‘aprendiendo’, ‘bucles’], recorrelo utilizando el bucle “for of” y muestra por consola todos sus elementos, después recórrelo utilizando el bucle “for in” mostrando también por consola todos sus elementos
+        arrayInventado = ["Con", "Sofía", "aprendiendo", "bucles"];
+        for (let inventado of arrayInventado) {
+            console.log("cada element", inventado)
+        }
+        for (let inventado in arrayInventado) {
+            console.log("cada key", inventado)
+        }
+        // Crea un bucle utilizando “while” que itere 20 veces y muestre por consola “Patata” cada vez que el número de la iteración sea múltiplo de 3
+        // let i = 0;
+        // while (i <= 20) {
+
+
+
+        //     console.log("patata");
+        //     i * 3;
+
+        // }
+        // Crea un programa el cual te pregunte por una nota del 0 al 10 y dependiendo del número, te devuelva la siguiente clasificación.
+        // Nota: Debes de usar el Switch.
+        // 0 - 4: Insuficiente.
+        // 5 - 6: Suficiente.
+        // 7 - 8: Notable.
+        // 9 - 10: Sobresaliente.
+        let nota = 2;
+        switch (nota) {
+            case (nota >= 0 && nota <= 4):
+                console.log("insuficiente")
+                break;
+            case (nota > 4 && nota <= 6):
+                console.log("suficiente")
+                break;
+            case (nota > 6 && nota <= 8):
+                console.log("notable")
+                break;
+            case (nota > 8 && nota < 11):
+                console.log("sobresaliente")
+                break;
+
+        }
+
+
+        // Crea una función resta que espere dos parámetros a y b y que devuelva la resta de los mismos.
+        function Resta(a, b) {
+            return a - b
+        }
+        console.log(Resta(7, 5))
+            // Crea la función duplicaNumero debe recibir un tipo number y devolver el doble del valor recibido. Si la función no recibe un dato tipo number debe devolver el string ‘Debo ser ejecutada con un número’
+            // 
+        function duplicaNumero(a) {
+            if (isNaN(a) === "false") {
+                a *= 2
+            } else {
+                console.log("debo ser ejecutada con un numero")
+            }
+        }
+        console.log(duplicaNumero(6))
+    </script>
+</body>
+
+</html>
