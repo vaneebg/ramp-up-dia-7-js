@@ -77,7 +77,7 @@
         for (let i = 4; i <= 18; i++) {
 
             arrayBucle.push(i);
-            console.log("arrayBucle", arrayBucle[i])
+            console.log("arrayBucle", arrayBucle)
         }
 
         console.log(arrayBucle)
@@ -169,14 +169,15 @@
             // Crea la función duplicaNumero debe recibir un tipo number y devolver el doble del valor recibido. Si la función no recibe un dato tipo number debe devolver el string ‘Debo ser ejecutada con un número’
             // 
         function duplicaNumero(a) {
-            if (typeof(a) === "false") {
+            if (typeof(a) === "number") {
                 return a = a * 2
             } else {
-                return ("debo ser ejecutada con un numero")
+                return "debo ser ejecutada con un numero"
             }
         }
         // palabra DEVOLVER es importante, usar return. 
-        console.log(duplicaNumero(6))
+        console.log(duplicaNumero(9))
+        console.log(duplicaNumero("hola"))
     </script>
 </body>
 
